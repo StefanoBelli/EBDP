@@ -9,17 +9,17 @@
 		</t:parameter>
 		
 		<t:parameter name="TargetIp" description="Target IP Address" type="IPv4" format="Scalar" valid="true">
-			<t:value>%RHOST%</t:value>
+			<t:value>%TARGET_IP_ADDRESS%</t:value>
 		</t:parameter>
 		
 		<t:parameter name="TargetPort" description="Port used by the Double Pulsar back door" type="TcpPort" format="Scalar" valid="true">
 			<t:default>445</t:default>
-			<t:value>%RPORT%</t:value>
+			<t:value>%TARGET_PORT%</t:value>
 		</t:parameter>
 		
 		<t:paramchoice name="Protocol" description="Protocol for the backdoor to speak">
 			<t:default>SMB</t:default>
-			<t:value>SMB</t:value>
+			<t:value>%PROTOCOL%</t:value>
 			<t:paramgroup name="SMB" description="Ring 0 SMB (TCP 445) backdoor"></t:paramgroup>
 			<t:paramgroup name="RDP" description="Ring 0 RDP (TCP 3389) backdoor"></t:paramgroup>
 		</t:paramchoice>
