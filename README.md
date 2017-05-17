@@ -16,6 +16,7 @@ The binary itself will check if an XML file exists with the same filename of the
 ## XML Required Values
   
 #### EternalBlue exploit
+  *(Input parameters, before exploitation)*
   - NetworkTimeout : replace *%TIMEOUT%* with your fav timeout sec. value
   - TargetIp : replace *%TARGET_IP_ADDRESS* with your target IP address
   - TargetPort : replace *%TARGET_SMB_PORT%* with your target's opened SMB port
@@ -30,6 +31,9 @@ The binary itself will check if an XML file exists with the same filename of the
  Other:
   - GroomAllocations
   - ShellcodeBuffer
+  
+ 
+  *(Output parameters, after exploitation)*
   - DoublePulsarPresent
   
  **NOTICE FOR TARGET**:
