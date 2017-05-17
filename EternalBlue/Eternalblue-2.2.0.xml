@@ -9,11 +9,11 @@
 <t:value>%TIMEOUT%</t:value>
 </t:parameter>
 <t:parameter name="TargetIp" description="Target IP Address" type="IPv4" format="Scalar" valid="true">
-<t:value>%RHOST%</t:value>
+<t:value>%TARGET_IP_ADDRESS%</t:value>
 </t:parameter>
 <t:parameter name="TargetPort" description="Port used by the SMB service for exploit connection" type="TcpPort" format="Scalar" valid="true">
 <t:default>445</t:default>
-<t:value>%RPORT%</t:value>
+<t:value>%TARGET_SMB_PORT%</t:value>
 </t:parameter>
 <t:parameter name="VerifyTarget" description="Validate the SMB string from target against the target selected before exploitation." type="Boolean" format="Scalar" valid="true">
 <t:default>true</t:default>
@@ -31,9 +31,10 @@
 <t:default>12</t:default>
 <t:value>12</t:value>
 </t:parameter>
-<t:parameter name="ShellcodeBuffer" description="Shellcode buffer in hex (hint: use 'F:&lt;FILENAME&gt;' to load from file)" type="Buffer" format="Scalar" hidden="true" required="false"></t:parameter>
+<t:parameter name="ShellcodeBuffer" description="Shellcode buffer in hex (hint: use 'F:&lt;FILENAME&gt;' to load from file)" type="Buffer" format="Scalar" hidden="true" required="false">
+</t:parameter>
 <t:paramchoice name="Target" description="Operating System, Service Pack, and Architecture of target OS">
-<t:value>%TARGET%</t:value>
+<t:value>%TARGET_OPERATING_SYSTEM%</t:value>
 <t:paramgroup name="XP" description="Windows XP 32-Bit All Service Packs"></t:paramgroup>
 <t:paramgroup name="WIN72K8R2" description="Windows 7 and 2008 R2 32-Bit and 64-Bit All Service Packs"></t:paramgroup>
 </t:paramchoice>
